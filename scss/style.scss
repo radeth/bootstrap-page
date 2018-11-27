@@ -1,0 +1,95 @@
+@import "settings";
+header {
+    background: url('./../img/adult-agency-business-380769.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+#section{
+    background: url('./../img/adult-agency-business-380769.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+.dot{
+    font-size: 2rem;
+    animation: dotAnimation 1s infinite;
+}
+@keyframes dotAnimation{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.buttonMore{
+    position: sticky;
+    z-index: 1;
+    color: #fff;
+    padding: 1rem;
+    background: linear-gradient(90deg, #6865fc, #f4ab1a, #ff5e01, #6865fc);
+    background-size: 400%;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    font-size: sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        animation: buttonAnimate 8s linear infinite;
+    }
+    &:before {
+        content: '';
+        border: 1px solid red;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        bottom: -15px;
+        right: -15px;
+        z-index: -1;
+        background: linear-gradient(90deg, #2926cc, #f4ab1a, #ff5e01, #2926cc);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    &:hover:before {
+        opacity: 1;
+        filter: blur(30px);
+        animation: buttonAnimate 8s linear infinite;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+@keyframes buttonAnimate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+section{
+    min-height: 100vh;
+}
+.project{
+    transition: 1s;
+    .layer{
+        height: 100%;
+        width: 100%;
+        margin: -1%;
+        position: absolute;
+    }
+    .blurLayer{
+        transition: 1s;
+        width: 100%;
+        margin: -1%;
+        position: absolute;
+        &:hover{
+            filter: blur(3px);
+        }
+    }
+}
