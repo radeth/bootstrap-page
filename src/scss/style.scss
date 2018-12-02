@@ -1,0 +1,125 @@
+@import "settings";
+header {
+    background: url('./../img/13703538_adult-agency-business-380769.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+section {
+    min-height: 100vh;
+}
+footer{
+    min-height: 13vh;
+    text-align: center;
+    font-size: 2rem
+}
+.footerIcon:hover{
+    font-size: 2.2rem;
+}
+#codeIcon {
+    font-size: 15rem;
+    filter: blur(3px);
+    opacity: 0.7;
+    animation: codeAnimate 8s linear infinite;
+}
+
+@keyframes codeAnimate {
+    0% {
+        transform: scale(1.2,1.2);
+        filter: blur(1px);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1,1);
+        filter: blur(3px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.2,1.2);
+        filter: blur(1px);
+        opacity: 0.9;
+    }
+}
+
+.dot {
+    margin-top: -25%;
+    font-size: 2rem;
+    animation: dotAnimation 1s infinite;
+}
+
+@keyframes dotAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.buttonMore {
+    position: sticky;
+    z-index: 1;
+    color: #fff;
+    padding: 1rem;
+    background: linear-gradient(90deg, #6865fc, #f4ab1a, #ff5e01, #6865fc);
+    background-size: 400%;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    font-size: sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        animation: buttonAnimate 8s linear infinite;
+    }
+    &:before {
+        content: '';
+        border: 1px solid red;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        bottom: -15px;
+        right: -15px;
+        z-index: -1;
+        background: linear-gradient(90deg, #2926cc, #f4ab1a, #ff5e01, #2926cc);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    &:hover:before {
+        opacity: 1;
+        filter: blur(30px);
+        animation: buttonAnimate 8s linear infinite;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+@keyframes buttonAnimate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+.project {
+    z-index: 1;
+    .layer {
+        z-index: 3;
+        display: none;
+        z-index: 10;
+        font-size: 2rem;
+        position: absolute;
+    }
+    .blurLayer {
+        z-index: 2;
+        transition: 1s;
+        width: 100%;
+        position: absolute;
+    }
+}
